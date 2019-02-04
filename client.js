@@ -1,13 +1,14 @@
 
 $(document).ready(onReady);
 
+let startingNumberOfRocks = 0;
+
 function onReady (){
     $('#addRockPicker').on('click', addNewRockPicker);
 }//end onReady
 
 function addNewRockPicker(){
    let firstName = $('#rockPickerName').val();
-   let startingNumberOfRocks = 0;
     $('#rockPickerTable').append(`
         <tr>
             <td>${firstName}</td>
@@ -28,15 +29,18 @@ function addNewRockPicker(){
 }//end addNewRockPicker
 
 function addOneRock(){
-    console.log('hi mom');
+    startingNumberOfRocks = startingNumberOfRocks +1;
+    console.log(startingNumberOfRocks);
 }//end addOneRock
 
 function minusOneRock(){
-    console.log('hi dad');
+    startingNumberOfRocks = startingNumberOfRocks -1;
+    console.log(startingNumberOfRocks);
 }
 
 function resetToZero(){
-    console.log('hi mary');
+    startingNumberOfRocks = 0;
+    console.log(startingNumberOfRocks);
 }
 
 function deleteRockPicker(){
